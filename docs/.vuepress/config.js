@@ -1,4 +1,4 @@
-const {getDatabase} = require('../database/database')
+
 const { getSidebar } = require('../../js/index');
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
             {
                 text: '理论课程',
                 items: [
-                    { text: '数据库', link: '/database/绪论' },
+                    { text: '数据库', link: '/database/<1>绪论' },
                 ]
             }
         ],

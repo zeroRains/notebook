@@ -1,22 +1,11 @@
 const fs = require("fs");
-const path = require("path");
-const { capitalize } = require("vue");
 
 /**
  *
  * @param {string} dir
  */
 function getPages(dir) {
-    return fs.readdirSync(dir).filter((f) => {
-        if (
-            fs.statSync(path.join(dir, f)).isDirectory() &&
-            fs.existsSync(path.join(dir, f, "index.md"))
-        ) {
-            return true;
-        }
-
-        return false;
-    });
+    return fs.readdirSync(dir);
 }
 
 /**
@@ -24,17 +13,14 @@ function getPages(dir) {
  * @param {string} folder 目录文件名
  * @param {string} title 标题
  */
-function getSidebar(folder, title) {
+function getSidebar(folder) {
     const pages = getPages(`docs/${folder}`);
-    const sidebar = [{
-        text: title,
-        link: `/${folder}/`,
-        children: [],
-    }, ];
-    pages.forEach((page) => {
-        sidebar[0].children.push({
-            text: capitalize(page),
-            link: `/${folder}/${page}/`,
+    const sidebar = [];
+    pages.forEach((md) => {
+        const name = md.substring(0, md.length-3)
+        sidebar.push({
+            title: name,
+            path: `/${folder}/${md}`,
         });
     });
     return sidebar;
