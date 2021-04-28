@@ -14,12 +14,16 @@ function getPages(dir) {
  * @param {string} title 标题
  */
 function getSidebar(folder) {
-    const pages = getPages(`docs/${folder}`);
+    let pages = getPages(`docs/${folder}`);
     const sidebar = [];
+    pages.sort(function(a, b) {
+        //todo 等学了正则再回来改吧....
+        return a.match(/\<(.+)\>/g)[0].replace('<', '').replace('>', '')*1 - b.match(/\<(.+)\>/g)[0].replace('<', '').replace('>', '')*1
+    });
     pages.forEach((md) => {
-        const name = md.substring(0, md.length-3)
+        const name = md.substring(0, md.length - 3)
         sidebar.push({
-            title: name,
+            title: name.substring(name.indexOf('>')+1),
             path: `/${folder}/${md}`,
         });
     });
