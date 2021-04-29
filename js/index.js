@@ -1,11 +1,14 @@
 const fs = require("fs");
+const path = require("path");
 
 /**
  *
  * @param {string} dir
  */
 function getPages(dir) {
-    return fs.readdirSync(dir);
+    return fs.readdirSync(dir).filter((self) => {
+        return !fs.statSync(path.join(dir, self)).isDirectory()
+    });
 }
 
 /**
@@ -18,12 +21,12 @@ function getSidebar(folder) {
     const sidebar = [];
     pages.sort(function(a, b) {
         //todo 等学了正则再回来改吧....
-        return a.match(/\<(.+)\>/g)[0].replace('<', '').replace('>', '')*1 - b.match(/\<(.+)\>/g)[0].replace('<', '').replace('>', '')*1
+        return a.match(/\<(.+)\>/g)[0].replace('<', '').replace('>', '') * 1 - b.match(/\<(.+)\>/g)[0].replace('<', '').replace('>', '') * 1
     });
     pages.forEach((md) => {
         const name = md.substring(0, md.length - 3)
         sidebar.push({
-            title: name.substring(name.indexOf('>')+1),
+            title: name.substring(name.indexOf('>') + 1),
             path: `/${folder}/${md}`,
         });
     });
