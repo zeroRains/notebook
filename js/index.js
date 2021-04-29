@@ -28,6 +28,7 @@ function getSidebar(folder) {
         sidebar.push({
             title: name.substring(name.indexOf('>') + 1),
             path: `/${folder}/${md}`,
+            collapsable: false,
         });
     });
     return sidebar;
