@@ -1,6 +1,9 @@
 const { getSidebar } = require('../../js/index');
 
 module.exports = {
+    markdown: {
+        lineNumbers: false
+    },
     title: '唤雨考拉的笔记本',
     description: '没用的笔记本，相信没人会看的',
     head: [
