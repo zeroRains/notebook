@@ -28,7 +28,7 @@ module.exports = {
             {
                 text: '游泳',
                 items: [
-                    { text: '算法', link: '/algorithm/<1>搜索与图论' },
+                    { text: '算法', link: '/algorithm/<2>数据结构' },
                 ]
             }
         ],
