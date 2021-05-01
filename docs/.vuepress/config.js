@@ -28,9 +28,9 @@ module.exports = {
             {
                 text: '游泳',
                 items: [
-                    { text: '算法', link: '/algorithm/<2>数据结构' },
+                    { text: '算法', link: '/algorithm/<99>竞赛中常用的C++黑魔法' },
                 ]
-            }
+            },
         ],
         // 为以下路由添加侧边栏
         sidebar: {
