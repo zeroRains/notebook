@@ -11,7 +11,8 @@ module.exports = {
             rel: 'icon',
             href: '/logo.png'
         }],
-        ['meta', { name: 'keywords', content: 'notebook,Therainisme,Algorithm,题解,算法,编程,学习笔记' }]
+        ['meta', { name: 'keywords', content: 'notebook,Therainisme,Algorithm,题解,算法,编程,学习笔记' }],
+        ['meta', { name: 'google-site-verification', content: 'lIhR5J6yRQNU2obnE35OxMfrUxOj7VjwjNbVE0gh7sk' }]
     ],
     themeConfig: {
         // 添加导航栏
