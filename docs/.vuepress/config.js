@@ -1,4 +1,4 @@
-const { getSidebar } = require('../../js/index');
+const { getSidebar } = require('../../js/utils');
 
 module.exports = {
     markdown: {
@@ -22,22 +22,29 @@ module.exports = {
                 link: 'https://github.com/Therainisme/Notebook'
             },
             {
-                text: '理论课程',
+                text: '理论技术',
                 items: [
                     { text: '数据库系统概论', link: '/database/<1>绪论' },
                 ]
             },
             {
-                text: '游泳',
+                text: '划水技术',
                 items: [
                     { text: '算法', link: '/algorithm/<99>竞赛中常用的C++黑魔法' },
+                ]
+            },
+            {
+                text: '废纸篓',
+                items: [
+                    { text: 'Java', link: '/waste-paper/<1>java' },
                 ]
             },
         ],
         // 为以下路由添加侧边栏
         sidebar: {
             '/database/': getSidebar('database'),
-            '/algorithm/': getSidebar('algorithm')
+            '/algorithm/': getSidebar('algorithm'),
+            '/waste-paper/': getSidebar('waste-paper'),
         }
     },
     plugins: [
