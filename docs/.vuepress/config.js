@@ -45,7 +45,7 @@ module.exports = {
             '/database/': getSidebar('database'),
             '/algorithm/': getSidebar('algorithm'),
             '/waste-paper/': getSidebar('waste-paper'),
-        }
+        },
     },
     plugins: [
         [
