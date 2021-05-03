@@ -16,8 +16,7 @@ module.exports = {
     ],
     themeConfig: {
         // 添加导航栏
-        nav: [
-            {
+        nav: [{
                 text: '理论技术',
                 items: [
                     { text: '数据库系统概论', link: '/database/[1]绪论' },
@@ -60,4 +59,9 @@ module.exports = {
             },
         ],
     ],
+    locales: {
+        '/': {
+            lang: 'zh-CN'
+        }
+    }
 }
