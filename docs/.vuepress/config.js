@@ -24,19 +24,19 @@ module.exports = {
             {
                 text: '理论技术',
                 items: [
-                    { text: '数据库系统概论', link: '/database/<1>绪论' },
+                    { text: '数据库系统概论', link: '/database/[1]绪论' },
                 ]
             },
             {
                 text: '划水技术',
                 items: [
-                    { text: '算法', link: '/algorithm/<99>竞赛中常用的C++黑魔法' },
+                    { text: '算法', link: '/algorithm/[99]竞赛中常用的C++黑魔法' },
                 ]
             },
             {
                 text: '废纸篓',
                 items: [
-                    { text: 'Java', link: '/waste-paper/<1>java' },
+                    { text: 'Java', link: '/waste-paper/[1]java' },
                 ]
             },
         ],
@@ -46,6 +46,9 @@ module.exports = {
             '/algorithm/': getSidebar('algorithm'),
             '/waste-paper/': getSidebar('waste-paper'),
         },
+        sidebarDepth: 2, // 目录深度
+        lastUpdated: '上次更新时间', // 上次更新
+        smoothScroll: true, // 页面滚动
     },
     plugins: [
         [

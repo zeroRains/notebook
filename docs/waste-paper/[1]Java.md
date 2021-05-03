@@ -177,7 +177,68 @@ void modified (User user) {
 
 虽然我们老师说不考，但是考到就完了啊，所以我打算把比较常用的方法记下来
 
-## Thread类相关
+::: tip 写在前面
+我赌它就算考了，实现的功能也不会很难
+:::
 
+### 窗体 & 容器
 
-## 改错题押题
+JFrame类或它的子类：
+
+```java
+MyWindow t = new MyWindow();
+t.setSize(300, 200); // 设置窗口宽高
+t.setVisible(true);  // 让它显形
+
+container.add(new JButton("登陆")); // 向一个组件内部添加组件
+```
+
+### 文本
+
+```java
+// 显示框
+JLabel l = new JLabel("这里是你想显示的文本");
+
+// 输入框
+JTextField textField = new JTextField("");
+textField.setText("请输入密码");
+String text = textField.getText(); // 获取输入的内容
+```
+
+### 按钮
+
+```java
+// 按钮的位置应该不会写，做多设置设置宽度，同上就行了
+JButton btnLogin = new JButton("登陆");
+container.add(btnLogin);
+
+// 添加点击事件
+// 注意！这个that对象必须是实现ActionListener接口的类或其子类
+// 当按钮被点击时，调用that对象上的
+// public void actionPerformed(ActionEvent e){..}方法
+btnLogin.addActionListener(that);
+```
+
+### 弹出的对话框
+
+```java
+// f是父组件
+// 能点击确定或不确定的对话框
+int option = JOptionPane.showConfirmDialog(f, "是否 使用外挂 ？");
+if (JOptionPane.OK_OPTION == option) {
+    // 能输入的对话框
+    String answer = JOptionPane.showInputDialog(f, "请输入yes，表明使用外挂后果自负");
+    if ("yes".equals(answer)) {
+        // 只能点确定的对话框
+        JOptionPane.showMessageDialog(f, "你使用外挂被抓住！ 罚拣肥皂3次！");
+    }
+}
+```
+
+## Thread类与Runnable接口
+
+::: tip 写在前面
+`Thread`是线程，`Runnable`
+:::
+
+## 改错题
