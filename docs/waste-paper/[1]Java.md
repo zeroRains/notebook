@@ -238,7 +238,16 @@ if (JOptionPane.OK_OPTION == option) {
 ## Thread类与Runnable接口
 
 ::: tip 写在前面
-`Thread`是线程，`Runnable`
+`Thread`是线程，`Runnable`是线程体，注意！`Thread`实现了`Runnable`接口！
 :::
 
+```java
+// 注意，这个That是实现了Runable接口的类
+Thread t = new Thread(that);
+// 当调用start方法时，会找到that实例对象中的run方法执行！
+t.start();
+// 因为Thread实现了Runnable接口，所以that可以是Thread相关类或Runnable相关类
+```
+
 ## 改错题
+
