@@ -16,11 +16,7 @@ module.exports = {
     ],
     themeConfig: {
         // 添加导航栏
-        nav: [{
-                text: 'GitHub',
-                // 这里是下拉列表展现形式。
-                link: 'https://github.com/Therainisme/Notebook'
-            },
+        nav: [
             {
                 text: '理论技术',
                 items: [
@@ -38,6 +34,11 @@ module.exports = {
                 items: [
                     { text: 'Java', link: '/waste-paper/[1]java' },
                 ]
+            },
+            {
+                text: 'GitHub',
+                // 这里是下拉列表展现形式。
+                link: 'https://github.com/Therainisme/Notebook'
             },
         ],
         // 为以下路由添加侧边栏
