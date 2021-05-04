@@ -44,9 +44,9 @@ module.exports = {
         sidebarDepth: 2, // 目录深度
         lastUpdated: '上次更新时间', // 上次更新
         smoothScroll: true, // 页面滚动,
-        editLink: true, 
+        // 编辑页面链接
+        editLinks: true, 
         editLinkText: '在 GitHub 上编辑此页 ！',
-        docsRepo: 'https://gitlab.com/Therainisme/notebook',
         docsBranch: 'main',
         docsDir: 'docs',
         editLinkPattern: ':repo/-/edit/:branch/:path',
