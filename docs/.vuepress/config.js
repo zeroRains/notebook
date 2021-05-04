@@ -34,11 +34,6 @@ module.exports = {
                     { text: 'Java', link: '/waste-paper/[1]java' },
                 ]
             },
-            {
-                text: 'GitHub',
-                // 这里是下拉列表展现形式。
-                link: 'https://github.com/Therainisme/Notebook'
-            },
         ],
         // 为以下路由添加侧边栏
         sidebar: {
@@ -48,7 +43,14 @@ module.exports = {
         },
         sidebarDepth: 2, // 目录深度
         lastUpdated: '上次更新时间', // 上次更新
-        smoothScroll: true, // 页面滚动
+        smoothScroll: true, // 页面滚动,
+        editLink: true, 
+        editLinkText: '在 GitHub 上编辑此页 ！',
+        docsRepo: 'https://gitlab.com/Therainisme/notebook',
+        docsBranch: 'main',
+        docsDir: 'docs',
+        editLinkPattern: ':repo/-/edit/:branch/:path',
+        repo: 'Therainisme/Notebook', //GitHub仓库
     },
     plugins: [
         [
@@ -62,6 +64,6 @@ module.exports = {
     locales: {
         '/': {
             lang: 'zh-CN'
-        }
+        },
     }
 }
