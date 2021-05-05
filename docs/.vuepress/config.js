@@ -43,10 +43,11 @@ module.exports = {
             '/waste-paper/': getSidebar('waste-paper'),
             '/code-snippets/': [{
                 title: 'Golang',
+                collapsable: false,
                 children: getSidebar('code-snippets/golang')
             }]
         },
-        sidebarDepth: 2, // 目录深度
+        sidebarDepth: 3, // 目录深度
         lastUpdated: '上次更新时间', // 上次更新
         smoothScroll: true, // 页面滚动,
         // 编辑页面链接
