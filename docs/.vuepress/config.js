@@ -19,6 +19,7 @@ module.exports = {
         nav: [{
                 text: '理论技术',
                 items: [
+                    { text: '代码片段', link: '/code-snippets/index' },
                     { text: '数据库系统概论', link: '/database/[1]绪论' },
                 ]
             },
@@ -40,12 +41,16 @@ module.exports = {
             '/database/': getSidebar('database'),
             '/algorithm/': getSidebar('algorithm'),
             '/waste-paper/': getSidebar('waste-paper'),
+            '/code-snippets/': [{
+                title: 'Golang',
+                children: getSidebar('code-snippets/golang')
+            }]
         },
         sidebarDepth: 2, // 目录深度
         lastUpdated: '上次更新时间', // 上次更新
         smoothScroll: true, // 页面滚动,
         // 编辑页面链接
-        editLinks: true, 
+        editLinks: true,
         editLinkText: '在 GitHub 上编辑此页 ！',
         docsBranch: 'main',
         docsDir: 'docs',
